@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>  
+    var box; //선언만 하고 값을 지정하지않는 경우 undefined 로 나온다
+    box = 100; //숫자형(Number)
+    box = '30'; //문자형(String)
+    box = true; //논리형(Boolean)
+    document.write(box);
+    //문자형
+    var s = "javascript";
+    var num = "100"; //100이라는 숫자가 문자형으로 입력된다
+    var tag = "<h1> String<br>test</h1>"
+    document.write(tag);
+    //숫자형
+    var n = 100;
+    var t = Number("500"); //문자형500에서 숫자형500으로 바뀜
+    document.write(typeof(t)); //typeof -어떤 문자형인지 알려주는 태그이다
+    //논리형
+    var s = true;
+    var t = 10 >= 100; //false
+    document.write(t);
+    //0,null,undefined,빈 문자(" ") - false
+    //제외한 모든 데이터 - true
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

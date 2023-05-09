@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>적정 몸무게를 알려주는 스크립트</title>
+    <script>
+        var username = prompt("당신의 이름은?", ""); //이름 입력
+        var userheight = prompt("당신의 신장은?", "0"); //키 입력
+        var userweight = prompt("당신의 체중은?", "0"); //몸무게 입력
+
+        //평균체중 = (키-100) *0.9
+        var normal_w = (userheight-100) * 0.9;
+        //오차범위 +5, -5
+        var result = userweight >= normal_w -5 && userweight<= normal_w +5;
+        result = result ? "적정 체중입니다" : "적정 체중이 아닙니다";
+
+        document.write(username + "님은 " + result);   
+       // document.write(normal_w);
+
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
