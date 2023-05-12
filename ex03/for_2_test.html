@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green{
+            color: #0f0;
+        }
+        .red{
+            color: #f00;
+        }
+        .aqua{
+            color: aqua;
+        }
+    </style>
+    <script>
+        //초기식  조건식   증감식
+        //1부터 100까지 5의 배수일 경우는 빨간색 글자
+        //7의 배수일 경우는 초록색
+        //5의 배수이며 7의 배수일 경우는 아쿠아색
+        for(var i =1; i<=100; i++){
+            if(i%5 == 0 && i%7 != 0){
+            document.write("<p class='red'>"+ i, "</p>")
+        }
+        if(i%7==0 && i%5 != 0){
+            document.write("<p class='green'>"+ i, "</p>")
+        }
+        if(i%5==0 && i%7==0){
+            document.write("<p class='aqua'>"+ i, "</p>")
+        }
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
