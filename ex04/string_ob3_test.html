@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자 객체</title>
+    <script>
+        var userEmail = prompt("당신의 이메일 주소는?","");
+        var arrUrl = [".co.kr", ".com",",net","or.kr","go.kr"];
+
+        var check1 = false; //@가 있는지 체크하려고 하는 변수
+        var check2 = false; //arrUrl 인덱스 안의 요소가 포함된 주소인지
+
+        if(userEmail.indexOf("@") != -1){ // -1과 같지않은경우 = 이메일에 @가 있는 경우
+            check1 = true; // 정상으로 바꿔라
+        }
+        for(var i = 0; i<arrUrl.length; i++){
+            if(userEmail.indexOf(arrUrl[i]) > 0){// 0보다 큰 경우 =arrUrl 인덱스 안의 요소가 포함된 주소인 경우
+                check2 = true;
+                break;
+            }
+        }
+        if(check1 && check2){
+            document.write(userEmail);
+        }else{
+            alert("이메일 형식이 잘못 되었습니다.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

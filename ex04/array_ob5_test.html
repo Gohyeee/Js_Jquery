@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열객체</title>
+    <script>
+        var greenArr = ["교대","방배","강남"];
+        var yellowArr = ["미금", "정자","수서"];
+         
+       greenArr.splice(1,1,"서초","역삼"); //2번 인덱스에서 1개를 잘라내고 서초,역삼을 추가해라
+       //greenArr.splice(2,0,"서초","역삼"); //2번 인덱스에서 0개를 잘라내고 서초, 역삼을 추가해라
+       console.log(greenArr);
+
+        var data1 = yellowArr.pop(); //pop:맨 마지막 데이터를 삭제해라 : 수서
+        var data2 = yellowArr.shift(); // shift:가장 앞에 있는 데이터를 삭제해라 : 미금
+
+        yellowArr.push(data2); //data2 데이터(미금)를 yellowArr 맨 마지막에 넣어라 : 정자+ 미금
+        console.log(yellowArr); 
+
+        yellowArr.unshift(data1); //data1 데이터(수서)를 yellowArr 맨 처음에 넣어라 : 수서 +정자+ 미금
+        console.log(yellowArr);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

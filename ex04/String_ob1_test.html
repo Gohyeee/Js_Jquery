@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    var t = "Hello Thank you good luck to you"; //t는 참조변수
+    //1.인덱스 16에 저장된 문자 출력
+    document.write(t.charAt(16),"<br/>"); //g
+  
+    //2.인덱스 처음(왼쪽)부터 시작해서 제일 먼저 발견된 "you" 의 인덱스 값 출력
+    document.write(t.indexOf("you"),"<br/>"); //12
+
+    //3.인덱스 16번 부터 시작해서 발견된 "you" 의 인덱스 값 출력
+document.write(t.indexOf("you",16),"<br/>"); //29
+    //찾는 값이 없다면 -1 출력되고 6.match를 사용할 경우 null이 출력됌
+     
+    //4.인덱스 (오른쪽에서 왼쪽으로 움직이며)마지막부터 시작해서 제일 먼저 발견된 "you"의 위치
+    document.write(t.lastIndexOf("you"),"<br/>"); //29
+   
+    //5.인덱스 (오른쪽에서 왼쪽으로  움직이며)25번 부터 시작해서 발견된 "you" 의 인덱스 값 출력
+    document.write(t.lastIndexOf("you",25),"<br/>"); //12
+    
+    //6.왼쪽부터 제일 먼저 발견된 "luck"과 일치되는 문자를 찾아 반환
+    document.write(t.match("luck"),"<br/>"); //luck
+   
+    //7.왼쪽부터 제일 먼저 발견된 "you"의 인덱스 값 출력
+    document.write(t.search("you"),"<br/>"); //12
+    
+    //8.문자열 인덱스 21부터 4글자를 가져오시오
+    document.write(t.substr(21,4),"<br/>"); //luck
+  
+    //9.인덱스 6부터 12 전까지(11까지) 글자를 가져오시오
+document.write(t.substring(6,12),"<br/>"); //Thank
+
+    //10.왼쪽부터 시작해서 제일 먼저 발견된 you를 me로 바꿔라
+document.write(t.replace("you","me"),"<br/>"); //Hello Thank me good luck to you
+    
+    //11.소문자로 변경된다
+    document.write(t.toLowerCase(),"<br/>");
+   
+    //12.대문자로 변경된다
+    document.write(t.toUpperCase(),"<br/>");
+   
+    //13.인덱스의 문자  총 개수를 알려준다,문자도 공백으로 취급한다
+document.write(t.length,"<br/>");//32
+    
+var s = t.split(" ");
+    //공백 문자를 기준으로 분리 배열에 저장되어 s에 할당
+    //Hello Thank you good luck to you 는 6개로 나눠져 단어로 배열(인덱스)에 저장된다
+    document.write(s[0],"<br/>"); //Hello
+    document.write(s[4],"<br/>"); //luck
+
+    var str ="ABC";
+    var c = str.charCodeAt(0); 
+    //0번 인덱스의 문제 "A"의 아스키코드값을 반환해줌 
+    document.write(c); //65
+
+    document.write(String.fromCharCode(65),"<br/>");
+    //A
+
+    // var a = "hello good";
+    // document.write(a.trim(" "));
+
+//모든 위치는 y의 위치를 기준으로 한다
+</script>
+</head>
+<body>
+    
+</body>
+</html>

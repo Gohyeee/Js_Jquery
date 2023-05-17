@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    //남은 일 수 계산법 
+    //특정날짜객체 - 현재날짜객체 =밀리/초(msc)로 값이 나오므로 
+    //내가 구하고자하는 시간에 맞는 계산식을 활용해야한다
+    //1초 = 1,000(msc)
+    //1분(60초) = 1000 * 60 //60,000
+    //1시간(60분) = 1000 * 60 * 60 //3,600,000
+    //1일(60분*24) = 1000 * 60 * 60 * 24 //86,400,000  
+    var today = new Date();
+    var nextYear = today.getFullYear() +1;
+    //getFullYear() 메서드는 주어진 날짜의 현지 시간 기준 연도를 반환합니다.
+
+    var theDate = new Date(nextYear,3,14);
+    var diffDate = theDate.getTime() -today.getTime();
+    //getTime() 메서드는 표준시에 따라 지정된 날짜의 시간에 해당하는 숫자 값을 반환합니다.
+
+    var result = Math.ceil(diffDate/(1000 * 60 * 60 * 24));
+    document.write("수료일 2023-04-14 D-Day: "+ result+"일 남았습니다.");
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
