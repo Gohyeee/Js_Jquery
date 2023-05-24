@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+    <script>
+        //지역변수 오류잡기: 지역함수로 감싸줌 (function(){}());
+        //function 안에 있으면 지역함수 단독function은 전역함수이다
+        //A개발자코드
+        (function(){
+            var num = 100;
+            function menu(){
+                num += 100;
+                alert(num); //200을 기대했으나
+            }
+            menu();
+        }());
+       // (function(){}());
+        //B개발자코드
+        (function(){
+            var num= 300;
+        function menu(){
+            alert(num); //밑에 같은 함수가 있는경우 덮어쓰기 되어 100이 된다
+          }
+          menu();
+        }());
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

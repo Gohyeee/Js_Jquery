@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+    <script>
+        //지역변수 오류사례
+        //A개발자코드
+        var num = 100;
+        function menu(){
+            num += 100;
+            alert(num); //200을 기대했으나
+        }
+        menu();
+
+        //B개발자코드
+        function menu(){
+            alert(num); //밑에 같은 함수가 있는경우 덮어쓰기 되어 100이 된다
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

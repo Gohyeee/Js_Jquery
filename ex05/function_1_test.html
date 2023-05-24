@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+    <script>
+        //호이스팅 방식
+        var count = 0;
+
+        myFnc(); //hello1
+        //함수 호출문이 먼저 나와도 호이스팅 방식이 적용되어 정상적으로 호출된다.
+
+        function myFnc(){
+            count++; //count = count+1; 
+            document.write("hello"+ count, "<br>");
+        }
+        myFnc(); //hello2 count가 2번째 호출되었기때문에 2가 된다
+
+       // theFnc(); 아규먼츠(매개변수)가 없는 익명함수 이므로 함수호출을 먼저해주면 오류가 발생한다
+        var theFnc = function(){
+            count++;
+            document.write("bye" + count, "<br>");
+        }
+        theFnc(); //bye3 count는 세번쨰 호출이므로 3이 된다
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

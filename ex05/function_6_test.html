@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+    <script>
+        var num = 1;
+        function gallery(direct){
+            if(direct){
+                if(num == 8) return;
+                num++;
+            } else {
+                if(num == 1) return;
+                num--;
+            }
+            var imgTag = document.getElementById("photo");
+            imgTag.setAttribute("src", "images/pic_" + num + ".jpg");
+        }
+    </script>
+</head>
+<body>
+    <div id="galleryZone"></div>
+        <p>
+            <button onclick="gallery(0)">이전</button> //0은 false 그이외의 값은 모두 true임을 활용한 것이다
+            <button onclick="gallery(1)">다음</button> // 공백과 숫자5를 써도 같은 결과를 얻을 수 있다.
+            //내장함수 boolean() 을 활용한 것이다
+        </p>
+        <p><img src="images/pic_1.jpg" id="photo" alt=""></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+    <script>
+        var score = 10; // 아무나 접근 가능한 전역변수이다
+
+        function myFnc(){
+            var score = 50; //함수안의 지역변수는 함수 안에서만 접근 가능하다
+            //함수 스코프에서는 지역변수 데이터를 가져옵니다.
+            alert(score); //50
+        }
+        myFnc();
+
+        alert(score); //10
+        //함수 스코프 밖에서는 전역변수 데이터를 가져옵니다.
+    </script>
+ </head>
+ <body>
+    
+ </body>
+ </html>
